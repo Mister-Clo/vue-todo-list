@@ -7,7 +7,7 @@
         <legend>Ajoutez une tâche</legend>
 
         <input type="text" name="titre" placeholder="Titre" required />
-        <label for="completed">Effectué :</label><input type="checkbox" name="completed" id="check"><br><br>
+        <label for="completed">Effectué ? :</label><input type="checkbox" name="completed" id="check"><br><br>
         <textarea rows="2" cols="40" name="contenu" placeholder="Donnez les détails de l'activité ici" required /><br>      
 
         <p>
