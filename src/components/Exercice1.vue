@@ -2,11 +2,11 @@
   <div>
     <img alt="Vue logo" src="../assets/logo.png">
     <h1>EXERCICE 1 - TODO LIST</h1>
-    <CreateTask/>
+    <CreateTask @addTask="createTask"/>
 
     <div class="taches container text-center mt-5 mb-5">
     <h2 class="mt-5 fw-bolder">Vos Tâches</h2><hr>
-      <TodoList @addTask="addTask" :fields="fields" :items="items"/>
+      <TodoList :fields="fields" :items="items"/>
     </div>
 
     
@@ -36,8 +36,8 @@ export default {
   },
 
   methods : {
-        addTask : function(){
-            alert("captured")
+        createTask : function(task){
+          
             this.items.push(task)
         }
     }
@@ -66,20 +66,3 @@ export default {
 
 
 </script>
-
-<style scoped>
-  form{
-    width:80%;
-    margin:auto;
-  }
-  div#coche{
-    text-align: left;
-  }
-  label{
-    display: inline-block;
-    margin-left: 2%;
-  }
-
-
-  
-</style>

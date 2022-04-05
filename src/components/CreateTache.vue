@@ -20,6 +20,7 @@ export default {
     name: 'CreateValue',
     data : function(){
         return{
+            //les valeurs par défaut de mes v-model
             titre:"",
             contenu:"",
             isCompleted:false
@@ -27,13 +28,32 @@ export default {
     },
     methods : {
         check : function(){
-            this.$emit('addTask',{
-                titre: this.titre,
-                contenu: this.contenu,
-                isCompleted: this.isCompleted
-            })
-            alert("Event emitted")
+           const task = {
+                Titre: this.titre,
+                Description: this.contenu,
+                Etat: this.isCompleted
+                }
+           
+           this.$emit('addTask',task)
+
+           this.titre = ""
+           this.contenu = ""
+           this.isCompleted = false
         }
     }
 }
 </script>
+
+<style scoped>
+  form{
+    width:80%;
+    margin:auto;
+  }
+  div#coche{
+    text-align: left;
+  }
+  label{
+    display: inline-block;
+    margin-left: 2%;
+  }
+</style>
