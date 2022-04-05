@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    name: 'CreateValue',
+    name: 'CreateTask',
     data : function(){
         return{
             //les valeurs par défaut de mes v-model
@@ -27,7 +27,7 @@ export default {
         }
     },
     methods : {
-        check : function(){
+        check(){
            const task = {
                 Titre: this.titre,
                 Description: this.contenu,

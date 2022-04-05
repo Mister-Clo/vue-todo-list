@@ -32,7 +32,7 @@ export default {
   },
 
   methods: {
-    toggleCheck : (item)=>{
+    toggleCheck(item){
         item['Etat'] = !item['Etat']
     }
   }
