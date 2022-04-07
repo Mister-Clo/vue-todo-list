@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Exercice1 from '../components/Exercice1.vue'
 import Exercice2 from '../components/Exercice2.vue'
+import GroupA from '@/components/GroupA.vue'
+import GroupB from '@/components/GroupB.vue'
+import GroupAB from '@/components/GroupAB.vue'
+
 
 const routes = [
   {
@@ -26,6 +30,21 @@ const routes = [
     path: '/exercice2',
     name: 'exercice2',
     component: Exercice2
+  },
+  {
+    path: '/group_a',
+    name: 'group_a',
+    component: GroupA
+  },
+  {
+    path: '/group_b',
+    name: 'group_b',
+    component: GroupB
+  },
+  {
+    path: '/group_ab',
+    name: 'group_ab',
+    component: GroupAB
   },
 
 ]

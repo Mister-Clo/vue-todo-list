@@ -1,7 +1,7 @@
 <template>
   <div>
     <img alt="Vue logo" src="../assets/logo.png">
-    <h1>EXERCICE 1 - TODO LIST</h1>
+    <h1 class="fw-bold">EXERCICE 1 - TODO LIST</h1>
     <CreateTask @addTask="createTask"/>
 
     <div class="taches container text-center mt-5 mb-5">
