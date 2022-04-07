@@ -33,29 +33,19 @@
   
   </table>
   </div>
-    <h5 class="fw-bold">Moyenne des notes : <span class="done">{{moyenneB}}</span></h5><h6 class="fw-bold">Moyenne Totale : <span class="incomplete">{{moyTotale}}</span></h6>
+    <h5 class="fw-bold">Moyenne des notes Groupe B : <span class="done">{{moyenneB}}</span></h5><h6 class="fw-bold">Moyenne Totale : <span class="incomplete">{{moyenneTotale}}</span></h6>
 
 </template>
 
 <script setup>
-import { reactive, ref, computed } from 'vue'
-import { moyenne } from '@/composables/moyenne.js'
-import { moyenneTotale } from './GroupAB.vue'
+import {ref, computed } from 'vue'
+import { moyenne,moyenneTotale,studentsB, fields} from '@/composables/moyenne.js'
 
-var studentsB = reactive(
-    [
-          {nom:"Roronoha", prenom:"Zoro", note:ref(19)},
-          {nom:"Vinsmoke", prenom:"Sanji", note:ref(18)},
-    ]
-)
 var nom = ref("")
 var prenom = ref("")
 var note = ref(0)
-const fields = ['nom', 'prenom', 'note']
 
 const moyenneB = computed(()=>{return moyenne(studentsB)})
-  
-const moyTotale = ref(moyenneTotale) 
 
 function addStudent(){
     const stud = {
